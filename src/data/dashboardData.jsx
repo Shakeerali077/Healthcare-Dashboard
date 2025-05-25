@@ -56,17 +56,17 @@ export const activeTimeSlots = {
 };
 
 // --- Specific colors based on the design image ---
-const BLUE_CARD_BG = '#dbeafe'; // Light blue, used for some cards (e.g., Dentist)
-const BLUE_CARD_TEXT = '#1e40af'; // Darker blue for text on light blue cards
-const GREEN_CARD_BG = '#d1fae5'; // Light green, used for some cards (e.g., Physiotherapy)
-const GREEN_CARD_TEXT = '#065f46'; // Darker green for text on light green cards
-const DEFAULT_CARD_BG = '#ffffff'; // White, for most cards
+// const BLUE_CARD_BG = '#dbeafe'; // Light blue, used for some cards (e.g., Dentist)
+// const BLUE_CARD_TEXT = '#1e40af'; // Darker blue for text on light blue cards
+// const GREEN_CARD_BG = '#d1fae5'; // Light green, used for some cards (e.g., Physiotherapy)
+// const GREEN_CARD_TEXT = '#065f46'; // Darker green for text on light green cards
+// const DEFAULT_CARD_BG = '#ffffff'; // White, for most cards
 const DARK_BLUE_CARD_BG = 'rgba(87, 52, 129, 1.00)';// dark blue card background
 const LIGHT_GRAY_CARD_BG = '#e5e7eb';// dark blue card background
 const DEFAULT_WHITE_TEXT = '#ffffff'; // White, for most cards
 const DEFAULT_CARD_TEXT = '#4b5563'; // Gray text on white cards
-const ICON_LIGHT_BLUE = '#bfdbfe'; // Light blue for some icons
-const ICON_LIGHT_GREEN = '#a7f3d0'; // Light green for some icons
+// const ICON_LIGHT_BLUE = '#bfdbfe'; // Light blue for some icons
+// const ICON_LIGHT_GREEN = '#a7f3d0'; // Light green for some icons
 const ICON_DEFAULT_GRAY = '#e5e7eb'; // Light gray for default icons
 
 
