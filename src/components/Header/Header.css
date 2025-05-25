@@ -1,0 +1,113 @@
+/* src/components/Header/Header.css */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-section {
+  /* background-color: black; */
+  width: 100%;
+  max-width: 50%;
+  padding-right: 1rem;
+}
+
+.search-section-border {
+  border: solid rgb(44, 42, 42) 1px;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  /* space-x-4 */
+  align-items: center;
+  border-radius: 0.75rem;
+  padding-left: 10px;
+}
+
+.search-icon {
+  color: #9ca3af;
+  /* text-gray-400 */
+  width: 1.25rem;
+  /* w-5 */
+  height: 1.25rem;
+  /* h-5 */
+}
+
+.search-input {
+  flex: 1;
+  /* flex-1 */
+  padding: 0.5rem;
+  /* p-2 */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  /* focus:outline-none */
+  color: #374151;
+  /* text-gray-700 */
+}
+
+.user-section {
+  width: 50%;
+  /* border: red solid 1px; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  /* space-x-4 */
+  height: 4.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0 0.75rem 0 0;
+  padding-right: 1rem;
+}
+
+.user-avatar-wrapper {
+  width: 2.5rem;
+  /* w-10 */
+  height: 2.5rem;
+  /* h-10 */
+  background-color: #bfdbfe;
+  /* bg-blue-200 */
+  border-radius: 9999px;
+  /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e40af;
+  /* text-blue-800 */
+  font-weight: 700;
+  /* font-bold */
+  font-size: 0.875rem;
+  /* text-sm */
+}
+
+.user-avatar-img {
+  border-radius: 9999px;
+  /* rounded-full */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-button {
+  width: 2.5rem;
+  /* w-10 */
+  height: 2.5rem;
+  /* h-10 */
+  background-color: #2563eb;
+  /* bg-blue-600 */
+  color: #ffffff;
+  /* text-white */
+  border-radius: 9999px;
+  /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  /* text-2xl */
+  font-weight: 300;
+  /* font-light */
+  border: none;
+  /* Ensure no default button border */
+  cursor: pointer;
+  /* Indicate it's clickable */
+}

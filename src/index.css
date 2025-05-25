@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  You can add any custom global CSS here if needed.
+  For example, to define custom scrollbar styles or font imports.
+*/
+
+/* Example for custom scrollbar (optional, might not be cross-browser compatible) */
+/*
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+*/
+
+/* Custom styles for the checkbox inputs to match standard UI when not using daisyUI toggles */
+input[type="checkbox"].form-checkbox {
+  @apply appearance-none h-5 w-5 border border-gray-300 rounded-md checked:bg-blue-600 checked:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"].form-checkbox:checked {
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* For the toggle effect in settings, if you're not using a library like DaisyUI or similar */
+/* This requires a slightly different HTML structure for the input, often with a hidden checkbox and a styled div/span */
+/*
+.toggle {
+  @apply relative inline-block w-10 h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out;
+  background-color: #cbd5e0; // gray-300
+}
+
+.toggle:before {
+  @apply absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 ease-in-out;
+  content: "";
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.toggle-primary {
+  @apply bg-gray-300;
+}
+
+.toggle-primary:checked {
+  @apply bg-blue-600;
+}
+
+.toggle-primary:checked:before {
+  transform: translateX(1.5rem); // Move 1.5rem (24px) to the right
+}
+*/

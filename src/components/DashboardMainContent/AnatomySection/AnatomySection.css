@@ -1,0 +1,212 @@
+/* src/components/DashboardMainContent/AnatomySection/AnatomySection.css */
+
+.anatomy-section-container {
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  /* Center items for smaller screens */
+}
+
+@media (min-width: 1024px) {
+
+  /* Adjust for larger screens (lg) where image is on left, cards on right */
+  .anatomy-section-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items to the top in row layout */
+  }
+}
+
+.anatomy-image-section {
+  position: relative;
+  /* For positioning overlays */
+  width: 100%;
+  /* Take full width on smaller screens */
+  max-width: 100px;
+  /* Limit image size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  /* Prevent image from shrinking */
+}
+
+@media (min-width: 1024px) {
+  .anatomy-image-section {
+    width: 250px;
+    /* Adjust size for desktop */
+    max-width: none;
+    /* Remove max-width on larger screens if desired */
+  }
+}
+
+
+.anatomy-body-img {
+  background-color: black;
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.anatomy-overlay-tag {
+  position: absolute;
+  background-color: #ffffff;
+  /* bg-white */
+  padding: 0.25rem 0.5rem;
+  /* px-2 py-1 */
+  border-radius: 9999px;
+  /* rounded-full */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* shadow-sm */
+  font-size: 0.75rem;
+  /* text-xs */
+  font-weight: 500;
+  /* font-medium */
+  color: #1f2937;
+  /* text-gray-800 */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+.anatomy-heart-overlay {
+  top: 30%;
+  /* Adjust as needed */
+  left: 5%;
+  /* Adjust as needed */
+  background-color: #d1fae5;
+  /* bg-green-100 */
+  color: #065f46;
+  /* text-green-800 */
+}
+
+.anatomy-leg-overlay {
+  bottom: 20%;
+  /* Adjust as needed */
+  right: 5%;
+  /* Adjust as needed */
+  background-color: #dbeafe;
+  /* bg-blue-100 */
+  color: #1e40af;
+  /* text-blue-800 */
+}
+
+.organ-status-cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* space-y-4 */
+  width: 100%;
+  /* Take full width on smaller screens */
+}
+
+@media (min-width: 1024px) {
+  .organ-status-cards-section {
+    width: auto;
+    /* Allow content to dictate width on larger screens */
+    flex-grow: 1;
+    /* Allow it to take available space */
+  }
+}
+
+
+.organ-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  /* space-x-3 */
+  background-color: #f9fafb;
+  /* bg-gray-50 */
+  padding: 0.75rem;
+  /* p-3 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* shadow-sm */
+}
+
+.organ-icon-wrapper {
+  padding: 0.5rem;
+  /* p-2 */
+  background-color: #ffffff;
+  /* bg-white */
+  border-radius: 9999px;
+  /* rounded-full */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* shadow-sm */
+}
+
+.organ-icon {
+  width: 1.25rem;
+  /* w-5 */
+  height: 1.25rem;
+  /* h-5 */
+  color: currentColor;
+  /* Inherit color from parent for consistency */
+}
+
+.organ-name {
+  font-size: 1rem;
+  /* text-base */
+  font-weight: 600;
+  /* font-semibold */
+  color: #1f2937;
+  /* text-gray-800 */
+}
+
+.organ-date {
+  font-size: 0.75rem;
+  /* text-xs */
+  color: #6b7280;
+  /* text-gray-500 */
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 9999px;
+  /* rounded-full */
+  height: 0.5rem;
+  /* h-2 */
+  overflow: hidden;
+  margin-top: 0.25rem;
+  /* mt-1 */
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  /* rounded-full */
+  /* Background color will be dynamic based on organ.status, applied via style prop */
+}
+
+/* This is the fix for the ESLint warning */
+.details-button {
+  display: inline-block;
+  /* To make it look like a link */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  /* text-sm */
+  font-weight: 500;
+  /* font-medium */
+  color: #2563eb;
+  /* text-blue-600 */
+  text-decoration: none;
+  /* Remove underline by default */
+  cursor: pointer;
+  text-align: left;
+  /* Align text to left */
+  /* self-align: flex-end; If you want to push it to the end of its container */
+}
+
+.details-button:hover {
+  text-decoration: underline;
+}

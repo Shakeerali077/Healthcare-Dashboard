@@ -1,0 +1,121 @@
+/* src/components/Sidebar/Sidebar.css */
+
+.sidebar-container {
+  width: 100%;
+  /* w-full */
+  background-color: #f8f9fa;
+  padding: 1rem;
+  /* p-4 */
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem 0 0 0.75rem;
+  /* rounded-xl */
+  margin: 0.5rem;
+  /* m-2 */
+}
+
+@media (min-width: 768px) {
+
+  /* md:w-64, md:p-6 */
+  .sidebar-container {
+    width: 16rem;
+    /* 256px */
+    padding: 1.5rem;
+  }
+}
+
+.sidebar-logo {
+  font-size: 1.5rem;
+  /* text-2xl */
+  font-weight: 700;
+  /* font-bold */
+  color: #2563eb;
+  /* text-blue-600 */
+  margin-bottom: 2rem;
+  /* mb-8 */
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* space-y-2 (converted to gap) */
+}
+
+.sidebar-divider {
+  margin-top: 0.5rem;
+  /* my-2 (top part) */
+  margin-bottom: 0.5rem;
+  /* my-2 (bottom part) */
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  /* border-gray-200 */
+}
+
+.sidebar-category-title {
+  font-size: 0.75rem;
+  /* text-xs */
+  color: #9ca3af;
+  /* text-gray-400 */
+  text-transform: uppercase;
+  font-weight: 600;
+  /* font-semibold */
+  margin-bottom: 0.5rem;
+  /* mb-2 */
+}
+
+.sidebar-nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  /* space-x-3 (converted to gap) */
+  padding: 0.75rem;
+  /* p-3 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  /* transition-colors */
+  transition-duration: 200ms;
+  /* duration-200 */
+  background-color: transparent;
+  /* default */
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /* Ensure button takes full width */
+  text-align: left;
+  /* Align text to left */
+}
+
+.sidebar-nav-button:hover {
+  background-color: #f9fafb;
+  /* hover:bg-gray-50 */
+}
+
+.sidebar-nav-button.active {
+  background-color: #dbeafe;
+  /* bg-blue-100 */
+  color: #1d4ed8;
+  /* text-blue-700 */
+  font-weight: 600;
+  /* font-semibold */
+}
+
+.sidebar-nav-button span {
+  color: #4b5563;
+  /* text-gray-600 */
+}
+
+.sidebar-nav-button.active span {
+  color: #1d4ed8;
+  /* Override for active state */
+}
+
+/* Styles for the icons within the buttons */
+.sidebar-nav-button svg {
+  /* You may need to define specific sizes if the icon components don't already do it */
+  /* For example: width: 1.25rem; height: 1.25rem; */
+  color: currentColor;
+  /* Ensures SVG inherits color from parent button */
+}

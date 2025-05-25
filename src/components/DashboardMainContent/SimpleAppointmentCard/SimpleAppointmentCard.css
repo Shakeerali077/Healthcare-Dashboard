@@ -1,0 +1,79 @@
+/* src/components/DashboardMainContent/SimpleAppointmentCard/SimpleAppointmentCard.css */
+
+.simple-appointment-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Equivalent to space-x-4 in Tailwind */
+  padding: 1rem;
+  /* Equivalent to p-4 in Tailwind */
+  border-radius: 0.75rem;
+  /* Equivalent to rounded-xl in Tailwind */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  /* Equivalent to shadow-sm or default shadow */
+  background-color: #ffffff;
+  /* Default background if not overridden by style prop */
+  margin: 1rem;
+  color: #374151;
+  /* Default text color if not overridden by style prop */
+}
+
+.schedule-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.simple-appointment-card-icon-wrapper {
+  flex-shrink: 0;
+  /* Prevent icon from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  /* Equivalent to w-10 */
+  height: 2.5rem;
+  /* Equivalent to h-10 */
+  border-radius: 0.5rem;
+  /* Equivalent to rounded-lg */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* A translucent white for icons */
+}
+
+.simple-appointment-card-icon {
+  width: 1.5rem;
+  /* Equivalent to w-6 */
+  height: 1.5rem;
+  /* Equivalent to h-6 */
+  color: currentColor;
+  /* Inherit color from parent (simple-appointment-card) */
+}
+
+.simple-appointment-card-title {
+  font-size: 1rem;
+  /* Equivalent to text-base */
+  font-weight: 600;
+  /* Equivalent to font-semibold */
+  line-height: 1.25;
+  /* Adjust line-height for better readability if needed */
+  margin-bottom: 0.25rem;
+  /* Small margin below title */
+}
+
+.simple-appointment-card-time {
+  font-size: 0.875rem;
+  /* Equivalent to text-sm */
+  color: inherit;
+  /* Inherit color from parent */
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+  /* Small margin below time */
+}
+
+.simple-appointment-card-doctor {
+  font-size: 0.75rem;
+  /* Equivalent to text-xs */
+  color: inherit;
+  /* Inherit color from parent */
+  opacity: 0.8;
+  /* Slightly less prominent */
+}
