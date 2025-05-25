@@ -1,10 +1,21 @@
 // src/components/DashboardMainContent/UpcomingSchedule/index.jsx
 import React from 'react';
+import ReactGA from 'react-ga4'; // Import ReactGA
 import SimpleAppointmentCard from '../SimpleAppointmentCard/SimpleAppointmentCard'; // Correct path
 import { upcomingScheduleData } from '../../../data/dashboardData'; // Make sure this is imported
 import './UpcomingSchedule.css'; // Import the CSS file
 
 const UpcomingSchedule = () => {
+
+    const handleCardClick = (appointment) => {
+        ReactGA.event({
+            category: 'Upcoming Schedule',
+            action: 'Appointment Card Clicked',
+            label: `${appointment.title} - ${appointment.time}`,
+            value: 1 // Example: value could be cost of appointment if relevant
+        });
+        console.log(`GA4 Event: Upcoming appointment card clicked: ${appointment.title}`); // For local testing
+    };
     return (
         <div className="upcoming-schedule-container">
             <h2 className="upcoming-schedule-header">The Upcoming Schedule</h2>
@@ -23,6 +34,7 @@ const UpcomingSchedule = () => {
                                     bgColor={appointment.bgColor}      
                                     textColor={appointment.textColor}   
                                     iconBgColor={appointment.iconBgColor} 
+                                    onClick={() => handleCardClick(appointment)} // Pass the click handler
                                 />
                             ))}
                         </div>

@@ -1,5 +1,6 @@
 // src/components/DashboardMainContent/AnatomySection/index.jsx
 import React from 'react';
+import ReactGA from 'react-ga4'; // Import ReactGA
 import { organData } from '../../../data/dashboardData';
 import { HeartPulseIcon, PillIcon } from '../../../Icons'; // Re-using icons for organ status
 import ReactLogo from '../../../Icons/body.png'; // Assuming this is your body image
@@ -15,12 +16,20 @@ const getOrganIcon = (organName) => {
 };
 
 // This function likely just logs or handles internal state for "Details" click
-const handleDetailsClick = () => {
-    console.log('Details button clicked');
-    // In a real app, this might open a modal, navigate, etc.
-};
+// const handleDetailsClick = () => {
+//     console.log('Details button clicked');
+//     // In a real app, this might open a modal, navigate, etc.
+// };s
 
 const AnatomySection = () => {
+    const handleDetailsClick = () => {
+        ReactGA.event({
+            category: 'Dashboard Interaction',
+            action: 'Anatomy Details Clicked',
+            label: 'Anatomy Section Details Button',
+        });
+        console.log('GA4 Event: Anatomy Details button clicked'); // For local testing
+    };
     return (
         <div className="anatomy-section-container">
             {/* Placeholder for human body image */}

@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+
+import ReactGA from 'react-ga4'; // Import react-ga4
+
+// Replace 'G-YOUR_MEASUREMENT_ID' with your actual Measurement ID
+const GA_MEASUREMENT_ID = 'G-C6T6TNDV0P';
+ReactGA.initialize(GA_MEASUREMENT_ID);
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
